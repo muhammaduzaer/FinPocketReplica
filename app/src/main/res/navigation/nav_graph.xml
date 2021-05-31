@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.feed.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" />
+
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.order.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.orderstatus.OrderStatusFragment"
+        android:label="fragment_order_status"
+        tools:layout="@layout/fragment_order_status" />
+
+    <fragment
+        android:id="@+id/portFolioFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.portfolio.PortFolioFragment"
+        android:label="fragment_port_folio"
+        tools:layout="@layout/fragment_port_folio" />
+
+    <fragment
+        android:id="@+id/watchListFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.watchlist.WatchListFragment"
+        android:label="fragment_watch_list"
+        tools:layout="@layout/fragment_watch_list" />
+
+</navigation>

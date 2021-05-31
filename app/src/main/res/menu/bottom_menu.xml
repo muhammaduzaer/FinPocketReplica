@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feedFragment"
+        android:icon="@drawable/ic_feed"
+        android:title="@string/feed" />
+
+    <item
+        android:id="@+id/watchListFragment"
+        android:icon="@drawable/ic_stars"
+        android:title="@string/watch_list" />
+
+    <item
+        android:id="@+id/portFolioFragment"
+        android:icon="@drawable/ic_portfolio"
+        android:title="@string/portfolio" />
+
+    <item
+        android:id="@+id/orderFragment"
+        android:icon="@drawable/ic_order"
+        android:title="@string/order" />
+
+    <item
+        android:id="@+id/orderStatusFragment"
+        android:icon="@drawable/ic_order_status"
+        android:title="@string/order_status" />
+
+</menu>

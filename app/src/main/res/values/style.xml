@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="navTextInactive">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/in_active_grey</item>
+    </style>
+
+    <style name="navTextActive">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_blue</item>
+    </style>
+
+    <style name="toggleButtonActive">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_blue</item>
+    </style>
+
+    <style name="toggleButtonInActive">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_blue</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+</resources>
