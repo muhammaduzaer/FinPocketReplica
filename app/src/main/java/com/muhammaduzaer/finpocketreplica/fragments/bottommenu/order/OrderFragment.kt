@@ -1,4 +1,4 @@
-package com.muhammaduzaer.finpocketreplica.fragments.order
+package com.muhammaduzaer.finpocketreplica.fragments.bottommenu.order
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

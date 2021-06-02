@@ -7,32 +7,67 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.muhammaduzaer.finpocketreplica.fragments.feed.FeedFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.bottommenu.feed.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" />
 
     <fragment
         android:id="@+id/orderFragment"
-        android:name="com.muhammaduzaer.finpocketreplica.fragments.order.OrderFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.bottommenu.order.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order" />
 
     <fragment
         android:id="@+id/orderStatusFragment"
-        android:name="com.muhammaduzaer.finpocketreplica.fragments.orderstatus.OrderStatusFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.bottommenu.orderstatus.OrderStatusFragment"
         android:label="fragment_order_status"
         tools:layout="@layout/fragment_order_status" />
 
     <fragment
         android:id="@+id/portFolioFragment"
-        android:name="com.muhammaduzaer.finpocketreplica.fragments.portfolio.PortFolioFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.bottommenu.portfolio.PortFolioFragment"
         android:label="fragment_port_folio"
         tools:layout="@layout/fragment_port_folio" />
 
     <fragment
         android:id="@+id/watchListFragment"
-        android:name="com.muhammaduzaer.finpocketreplica.fragments.watchlist.WatchListFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.bottommenu.watchlist.WatchListFragment"
         android:label="fragment_watch_list"
         tools:layout="@layout/fragment_watch_list" />
+    <fragment
+        android:id="@+id/faqsFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.faq.FaqsFragment"
+        android:label="fragment_faqs"
+        tools:layout="@layout/fragment_faqs" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.aboutus.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.contactus.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/brokerageFragment2"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.BrokerageFragment"
+        android:label="fragment_brokerage"
+        tools:layout="@layout/fragment_brokerage" />
+    <fragment
+        android:id="@+id/brokerageCalculatorFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.tabs.BrokerageCalculatorFragment"
+        android:label="fragment_brokerage_calculator"
+        tools:layout="@layout/fragment_brokerage_calculator" />
+    <fragment
+        android:id="@+id/commissionStructureFragment"
+        android:name="com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.tabs.CommissionStructureFragment"
+        android:label="fragment_commission_structure"
+        tools:layout="@layout/fragment_commission_structure" />
 
 </navigation>

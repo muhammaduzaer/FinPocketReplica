@@ -2,32 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mainDashboard"
+        android:id="@+id/feedFragment"
         android:title="@string/main_dashboard"
         android:icon="@drawable/ic_home_dashboard" />
 
     <item
-        android:id="@+id/brokerage"
+        android:id="@+id/brokerageFragment2"
         android:title="@string/brokerage_calcultor"
         android:icon="@drawable/ic_brokerage_calculator"/>
 
     <item
-        android:id="@+id/faq"
+        android:id="@+id/faqsFragment"
         android:title="@string/faqs"
         android:icon="@drawable/ic_faqs"/>
 
     <item
-        android:id="@+id/aboutUs"
+        android:id="@+id/aboutUsFragment"
         android:title="@string/about_us"
         android:icon="@drawable/ic_about_us"/>
 
     <item
-        android:id="@+id/contactus"
+        android:id="@+id/contactUsFragment"
         android:title="@string/contact_us"
         android:icon="@drawable/ic_contact_us"/>
 
     <item
-        android:id="@+id/settings"
+        android:id="@+id/settingsFragment"
         android:title="@string/settings"
         android:icon="@drawable/ic_settings"/>
 

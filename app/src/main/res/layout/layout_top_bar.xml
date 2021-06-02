@@ -6,7 +6,7 @@
     android:background="@color/app_green">
 
     <ImageButton
-        android:id="@+id/imageButtonSideNav"
+        android:id="@+id/imageButtonOpenSideNav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"

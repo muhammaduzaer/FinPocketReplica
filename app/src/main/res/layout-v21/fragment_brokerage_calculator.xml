@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".fragments.sidemenu.brokerage.tabs.BrokerageCalculatorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutOrderDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/background_card_shape"
+        android:elevation="2dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_type"
+            style="@style/textStyleWith14spBold"
+            app:layout_constraintBottom_toBottomOf="@id/radioGroupOrderType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/radioGroupOrderType" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/radioButtonBuy"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="@string/buy"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sell"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayoutCounter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/linearLayoutCounter" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupOrderType">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="@string/decrement_sign" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/_0"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/increment_sign" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/includeRates"
+        layout="@layout/item_shares_rate_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutOrderDetails" />
+
+    <TextView
+        android:id="@+id/textViewBrokerageTaxNetTotalText"
+        style="@style/textStyleWith14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/brokeragetaxnettotal"
+        app:layout_constraintBottom_toBottomOf="@id/textViewBrokerageTaxNetTotalRates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeRates" />
+
+    <TextView
+        android:id="@+id/textViewBrokerageTaxNetTotalRates"
+        style="@style/textStyleWith14spBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/_00_00"
+        app:layout_constraintBottom_toBottomOf="@id/textViewBrokerageTaxNetTotalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeRates" />
+
+    <TextView
+        android:id="@+id/textViewTotalPriceOfSharesText"
+        style="@style/textStyleWith14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/total_price_of_share"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTotalPriceOfSharesRates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBrokerageTaxNetTotalText" />
+
+    <TextView
+        android:id="@+id/textViewTotalPriceOfSharesRates"
+        style="@style/textStyleWith14spBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/_00_00"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTotalPriceOfSharesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBrokerageTaxNetTotalText" />
+
+    <TextView
+        android:id="@+id/textViewAmountToPayText"
+        style="@style/textStyleWith14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/amount_to_be_paid"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAmountToPayRates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTotalPriceOfSharesText" />
+
+    <TextView
+        android:id="@+id/textViewAmountToPayRates"
+        style="@style/textStyleWith14spBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/_00_00"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAmountToPayText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTotalPriceOfSharesText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
