@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.muhammaduzaer.finpocketreplica.R
+import com.muhammaduzaer.finpocketreplica.fragments.base.BottomBaseFragment
 
-class OrderStatusFragment : Fragment() {
+class OrderStatusFragment : BottomBaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

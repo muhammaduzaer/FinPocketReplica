@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.bottommenu.feed.FeedFragment">
+    tools:context=".fragments.bottommenu.feed.FeedFragment"
+    android:orientation="vertical"
+    android:background="#ECECEC">
 
 
-    <TextView
+    <com.google.android.material.chip.ChipGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FEED"
-        android:textSize="34sp"
-        android:textColor="@color/black"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:padding="8dp"
+        app:chipSpacingHorizontal="16dp"
+        android:background="@color/white"
+        android:elevation="2dp">
 
-</FrameLayout>
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/indices"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/market_movers"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/top_gainers"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/top_losers"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/shariah"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyleFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/news"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_feed_recyclerview_item"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

@@ -8,17 +8,15 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
+import com.miletap.tapchat.gone
+import com.miletap.tapchat.visible
 import com.muhammaduzaer.finpocketreplica.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.layout_top_bar.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var bindingMain: ActivityMainBinding
     private lateinit var navController: NavController
-    private lateinit var bottomNavMenu: BottomNavigationView
-    private lateinit var sideNavMenu: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,14 +24,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(bindingMain.root)
 
         navController = findNavController(R.id.fragmentContainerView)
-        bottomNavMenu = bindingMain.bottomNavigationView
-        bottomNavMenu.setupWithNavController(navController)
-
-        sideNavMenu = bindingMain.navigationView
-        sideNavMenu.setupWithNavController(navController)
+        bindingMain.bottomNavigationView.setupWithNavController(navController)
+        bindingMain.navigationView.setupWithNavController(navController)
 
         setToggleButton()
         bindingMain.imageButtonOpenSideNav.setOnClickListener(this)
+        bindingMain.imageButtonAccount.setOnClickListener(this)
+        bindingMain.imageButtonSearch.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -41,7 +38,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             bindingMain.imageButtonOpenSideNav.id -> {
                 bindingMain.drawerLayoutSideNavMenu.openDrawer(bindingMain.navigationView)
             }
+
+            bindingMain.imageButtonAccount.id -> {
+                navController.navigate(R.id.profileFragment)
+            }
+
+            bindingMain.imageButtonSearch.id -> {
+                navController.navigate(R.id.searchFragment)
+            }
         }
+    }
+
+    fun hideBottomNav() {
+        bindingMain.bottomNavigationView.gone()
+    }
+
+    fun showBars() {
+        bindingMain.constraintLayoutTopAppBar.visible()
+        bindingMain.bottomNavigationView.visible()
+    }
+
+    fun removeAllBars() {
+        bindingMain.bottomNavigationView.gone()
+        bindingMain.constraintLayoutTopAppBar.gone()
     }
 
     private fun setToggleButton() {
@@ -53,15 +72,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     bindingMain.buttonReal.setTextColor(ContextCompat.getColor(this, R.color.app_green))
                     bindingMain.buttonDemo.setBackgroundColor(ContextCompat.getColor(this, R.color.app_green))
                     bindingMain.buttonDemo.setTextColor(ContextCompat.getColor(this, R.color.white))
-                    Toast.makeText(this, "TOGGLED TO REAL", Toast.LENGTH_SHORT).show()
+                    bindingMain.constraintLayoutTopAppBar.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
 
                 R.id.buttonDemo -> {
+
                     bindingMain.buttonDemo.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
                     bindingMain.buttonDemo.setTextColor(ContextCompat.getColor(this, R.color.app_green))
                     bindingMain.buttonReal.setBackgroundColor(ContextCompat.getColor(this, R.color.app_green))
                     bindingMain.buttonReal.setTextColor(ContextCompat.getColor(this, R.color.white))
-                    Toast.makeText(this, "TOGGLED TO DEMO", Toast.LENGTH_SHORT).show()
                 }
             }
         }

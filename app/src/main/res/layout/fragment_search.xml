@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.topbar.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12sp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back_button"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="12dp"
+            android:hint="@string/search_all"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageButtonBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/in_active_grey"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:chipSpacingHorizontal="16dp">
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/all"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp"
+            app:checkedIconEnabled="false"
+            />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/index"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/black"
+            app:chipStrokeWidth="1dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/in_active_grey"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</LinearLayout>

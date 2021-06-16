@@ -27,4 +27,22 @@
     <string name="sell">SELL</string>
     <string name="buy">BUY</string>
     <string name="order_type">Order Type</string>
+    <string name="app_logo">App Logo</string>
+    <string name="menu_button">Menu Button</string>
+    <string name="real">Real</string>
+    <string name="demo">Demo</string>
+    <string name="back_button">Back Button</string>
+    <string name="search_all">Search All</string>
+    <string name="market_state_close">Market State: Close</string>
+    <string name="market_state_open">Market State: Open</string>
+    <string name="all">All</string>
+    <string name="company">Company</string>
+    <string name="index">Index</string>
+    <string name="profile">Profile</string>
+    <string name="indices">Indices</string>
+    <string name="market_movers">Market Movers</string>
+    <string name="top_gainers">Top Gainers</string>
+    <string name="top_losers">Top Losers</string>
+    <string name="shariah">Shariah</string>
+    <string name="news">News</string>
 </resources>

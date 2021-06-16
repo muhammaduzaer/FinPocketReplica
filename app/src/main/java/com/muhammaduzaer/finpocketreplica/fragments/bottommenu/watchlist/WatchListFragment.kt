@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.muhammaduzaer.finpocketreplica.R
+import com.muhammaduzaer.finpocketreplica.fragments.base.BottomBaseFragment
 
 
-class WatchListFragment : Fragment() {
+class WatchListFragment : BottomBaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

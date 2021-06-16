@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.muhammaduzaer.finpocketreplica.R
 import com.muhammaduzaer.finpocketreplica.databinding.FragmentBrokerageBinding
+import com.muhammaduzaer.finpocketreplica.fragments.base.NonBottomBaseFragment
 import com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.adapter.TabLayoutAdapter
 import com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.tabs.BrokerageCalculatorFragment
 import com.muhammaduzaer.finpocketreplica.fragments.sidemenu.brokerage.tabs.CommissionStructureFragment
 
 
-class BrokerageFragment : Fragment() {
+class BrokerageFragment : NonBottomBaseFragment() {
 
     private lateinit var brokerageBinding: FragmentBrokerageBinding
 

@@ -1,21 +1,35 @@
 package com.muhammaduzaer.finpocketreplica.fragments.bottommenu.feed
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.muhammaduzaer.finpocketreplica.R
+import com.muhammaduzaer.finpocketreplica.databinding.FragmentFeedBinding
+import com.muhammaduzaer.finpocketreplica.fragments.base.BottomBaseFragment
 
 
-class FeedFragment : Fragment() {
+class FeedFragment : BottomBaseFragment(), View.OnClickListener {
+
+    private lateinit var binding: FragmentFeedBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feed, container, false)
+        binding = FragmentFeedBinding.inflate(inflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id) {
+
+        }
     }
 
 }
